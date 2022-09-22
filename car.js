@@ -11,3 +11,7 @@ const Car = function(model, manufacturer, engine) {
     this.setEngine = (engine) => _engine = engine;
 
 }
+
+module.exports = {Car};
+
+
