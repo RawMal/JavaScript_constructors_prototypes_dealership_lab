@@ -10,5 +10,5 @@ describe('Car', () => {
         console.log(car1.getManufacturer);
         expect(actual).toBe(expected);
     };
-}
+} 
 )
