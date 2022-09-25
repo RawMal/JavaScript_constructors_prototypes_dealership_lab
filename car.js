@@ -11,6 +11,11 @@ const Car = function(manufacturer, price, engine) {
     this.getEngine = () => _engine;
     this.setEngine = (engine) => _engine = engine;
 
+    // function Car(manufacturer, price, engine) {
+    //     this.manufacturer = manufacturer
+    //     this.price = price
+    //     this.engine = engine
+    // } Easier way of doing the above
 }
 
 module.exports = {Car};
