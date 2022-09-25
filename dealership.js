@@ -1,9 +1,9 @@
 
 
 const Dealership = function(name, carCapacity, carsInStock) {
-    let _name = name;
-    let _carCapacity = carCapacity;
-    let _carsInStock = [];
+    this._name = name;
+    this._carCapacity = carCapacity;
+    this. _carsInStock = [];
 
     // this.getName = () => _name;
     // this.setName = (name) => _name = name;
@@ -16,6 +16,12 @@ const Dealership = function(name, carCapacity, carsInStock) {
     Dealership.prototype.count = function () {
         return this._carsInStock.length; // Shows how many cars in stock at dealership
     }
+
+    Dealership.prototype.add = function (car) {
+        if (this.count() < this._carCapacity) { // caps car count
+            this._carsInStock.push(car) //adds car to dealership stock list
+    }
+}
 }
 
 module.exports = {Dealership};

@@ -8,8 +8,9 @@ test("Dealership - count()", () => {
     let _carsInStock = [new Car('Ferrari', 250000, '5l V12'), new Car('Maserati', 100000, '5l V8')];
 
 
-    let dealership = new Dealership(_name, _carCapacity, _carsInStock);
-    dealership.cars = cars;
+    let dealership = new Dealership(_name, _carCapacity);
+    dealership._carsInStock = _carsInStock;
+    
 
     expect(dealership.count()).toBe(2);
 }
