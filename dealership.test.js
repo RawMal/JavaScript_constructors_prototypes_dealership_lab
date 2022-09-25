@@ -9,10 +9,11 @@ test("Dealership - count()", () => {
 
 
     let dealership = new Dealership(_name, _carCapacity);
-    dealership._carsInStock = _carsInStock;
-    
-
+    dealership._carsInStock = _carsInStock; //tests cars in stock function
     expect(dealership.count()).toBe(2);
+
+    dealership.add(new Car('Lamborghini', 300000, '6l V12'));
+    expect(dealership.count()).toBe(3); //tests if cars can be added
 }
 
 
