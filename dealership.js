@@ -21,6 +21,28 @@ const Dealership = function(name, carCapacity, carsInStock) {
         if (this.count() < this._carCapacity) { // caps car count
             this._carsInStock.push(car) //adds car to dealership stock list
     }
+
+    Dealership.prototype.manufacturers = function () {
+        return this._carsInStock.map( (car) => car.manufacturer) //returns an array of each cars manufacturer
+        // let result = []
+        // this._carsInStock.forEach(car => {
+        //     result.push(car.manufacturer)
+        // })
+        // return result;
+    }
+
+    Dealership.prototype.carsWithManufacturer = function (manufacturer) {
+        return this._carsInStock.filter( car => car.manufacturer == manufacturer)
+    }
+
+    Dealership.prototype.total = function () {
+        return this._carsInStock.reduce((total, car) => total += car.price, 0)
+    }
+
+    
+
+
+
 }
 }
 
